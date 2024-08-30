@@ -1,0 +1,43 @@
+{
+  "ForgetPassword": {
+    "forgetPassword": "Mot de passe oublié",
+    "email": "Email",
+    "sendEmail": "Envoyer l'email",
+    "emailPlaceholder": "Entrez votre email",
+    "backToLogin": "Retour à la connexion"
+  },
+  "SignUp": {
+    "signUp": "S'inscrire",
+    "welcomeSignUp": "Bienvenue pour vous inscrire",
+    "username": "Nom d'utilisateur",
+    "usernamePlaceholder": "Entrez votre nom d'utilisateur",
+    "firstName": "Prénom",
+    "firstNamePlaceholder": "Entrez votre prénom",
+    "lastName": "Nom de famille",
+    "lastNamePlaceholder": "Entrez votre nom de famille",
+    "phoneNumber": "Numéro de téléphone",
+    "phoneNumberPlaceholder": "Entrez votre numéro de téléphone",
+    "email": "Email",
+    "emailPlaceholder": "Entrez votre email",
+    "password": "Mot de passe",
+    "passwordPlaceholder": "Entrez votre mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "confirmPasswordPlaceholder": "Confirmez votre mot de passe",
+    "signUpButton": "S'inscrire",
+    "alreadyHaveAccount": "Vous avez déjà un compte",
+    "alreadyMember": "Déjà membre"
+  },
+  "Login": {
+    "login": "Connexion",
+    "welcomeLogin": "Bienvenue pour vous connecter",
+    "emailOrUsername": "Email ou nom d'utilisateur",
+    "emailOrUsernamePlaceholder": "Entrez votre email ou nom d'utilisateur",
+    "usernamePlaceholder": "Entrez votre nom d'utilisateur",
+    "password": "Mot de passe",
+    "passwordPlaceholder": "Entrez votre mot de passe",
+    "forgotPassword": "Mot de passe oublié",
+    "loginToAccount": "Connectez-vous à votre compte",
+    "createAccount": "Créer un compte",
+    "notMember": "Pas encore membre"
+  }
+}

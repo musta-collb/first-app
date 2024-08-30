@@ -1,0 +1,53 @@
+{
+  "ForgetPassword": {
+    "forgetPassword": "Forgot password",
+    "email": "Email",
+    "sendEmail": "Send email",
+    "emailPlaceholder": "Enter your email",
+    "backToLogin": "Back to login"
+  },
+  "SignUp": {
+    "signUp": "Sign up",
+    "welcomeSignUp": "Welcome to sign up",
+    "username": "Username",
+    "usernamePlaceholder": "Enter your username",
+    "firstName": "First name",
+    "firstNamePlaceholder": "Enter your first name",
+    "lastName": "Last name",
+    "lastNamePlaceholder": "Enter your last name",
+    "phoneNumber": "Phone number",
+    "phoneNumberPlaceholder": "Enter your phone number",
+    "email": "Email",
+    "emailPlaceholder": "Enter your email",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "confirmPassword": "Confirm password",
+    "confirmPasswordPlaceholder": "Confirm your password",
+    "signUpButton": "Sign up",
+    "alreadyHaveAccount": "Already have an account",
+    "alreadyMember": "Already a member"
+  },
+  "Login": {
+    "login": "Login",
+    "welcomeLogin": "Welcome to login",
+    "emailOrUsername": "Email or username",
+    "emailOrUsernamePlaceholder": "Enter your email or username",
+    "usernamePlaceholder": "Enter your username",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "forgotPassword": "Forgot password",
+    "loginToAccount": "Login to your account",
+    "createAccount": "Create an account",
+    "notMember": "Not a member"
+  },
+  "InputValidationMessages": {
+    "required": "This field is required",
+    "invalidEmail": "Invalid email address",
+    "minLength": "This field must be at size",
+    "maxLength": "This field must be at size",
+    "invalidPasswordPattern": "Password must contain at least one uppercase letter, one lowercase letter, one number and one special character",
+    "passwordMismatched": "Passwords do not match",
+    "invalidPhoneNumber": "Invalid phone number",
+    "invalidUsername": "Invalid username"
+  }
+}

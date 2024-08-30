@@ -1,9 +1,14 @@
 "use client";
-import { useState } from "react";
-import { UserShcema, getSignUpModel } from "../models/user-model";
-import Errors from "../components/input/errors";
+import { use, useState } from "react";
+import { UserShcema, getSignUpModel } from "../../models/user-model";
+import Errors from "../../components/errors";
+import logoPic from "../../../../public/logo.png";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function SignUp() {
+  const transalationMessage = useTranslations("SignUp");
+
   const [errors, setErrors] = useState<{ message: string; key: string }[]>([]);
   const handleSubmit = (formData: any) => {
     const result = UserShcema.safeParse(getSignUpModel(formData));
@@ -24,9 +29,9 @@ export default function SignUp() {
     <>
       <div className="flex min-h-full flex-3 flex-col justify-center px-6 py-12 lg:px-8 ">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img alt="logo" src="logo.png" className="mx-auto h-20 w-auto" />
+          <Image src={logoPic} className="mx-auto h-20 w-auto" alt="logo" />
           <h2 className="mt-8 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            Sign in to your account
+            {transalationMessage("welcomeSignUp")}
           </h2>
         </div>
 
@@ -38,7 +43,7 @@ export default function SignUp() {
                 htmlFor="username"
                 className="block text-sm font-medium leading-6 text-gray-900 required"
               >
-                Username
+                {transalationMessage("username")}
                 <sup className="text-red-600 text-sm mx-1">*</sup>
               </label>
               <div className="mt-2">
@@ -46,6 +51,7 @@ export default function SignUp() {
                   id="username"
                   type="text"
                   name="username"
+                  placeholder={transalationMessage("usernamePlaceholder")}
                   className="p-2 block w-full outline-none rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
@@ -56,7 +62,7 @@ export default function SignUp() {
                 htmlFor="email"
                 className="block text-sm font-medium leading-6 text-gray-900 required"
               >
-                Email
+                {transalationMessage("email")}
                 <sup className="text-red-600 text-sm mx-1">*</sup>
               </label>
               <div className="mt-2">
@@ -64,6 +70,7 @@ export default function SignUp() {
                   id="email"
                   type="email"
                   name="email"
+                  placeholder={transalationMessage("emailPlaceholder")}
                   className="p-2 block w-full outline-none rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
@@ -75,7 +82,7 @@ export default function SignUp() {
                   htmlFor="firstName"
                   className="block text-sm font-medium leading-6 text-gray-900 required"
                 >
-                  First name
+                  {transalationMessage("firstName")}
                   <sup className="text-red-600 text-sm mx-1">*</sup>
                 </label>
                 <div className="mt-2">
@@ -83,6 +90,7 @@ export default function SignUp() {
                     id="firstName"
                     type="firstName"
                     name="firstName"
+                    placeholder={transalationMessage("firstNamePlaceholder")}
                     className="p-2 block w-full outline-none rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -93,7 +101,7 @@ export default function SignUp() {
                   htmlFor="lastName"
                   className="block text-sm font-medium leading-6 text-gray-900 required"
                 >
-                  Last name
+                  {transalationMessage("lastName")}
                   <sup className="text-red-600 text-sm mx-1">*</sup>
                 </label>
                 <div className="mt-2">
@@ -101,6 +109,7 @@ export default function SignUp() {
                     id="lastName"
                     type="lastName"
                     name="lastName"
+                    placeholder={transalationMessage("lastNamePlaceholder")}
                     className="p-2 block w-full outline-none rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -112,7 +121,7 @@ export default function SignUp() {
                 htmlFor="phoneNumber"
                 className="block text-sm font-medium leading-6 text-gray-900 required"
               >
-                Phone number
+                {transalationMessage("phoneNumber")}
                 <sup className="text-red-600 text-sm mx-1">*</sup>
               </label>
               <div className="mt-2">
@@ -120,6 +129,7 @@ export default function SignUp() {
                   id="phoneNumber"
                   type="phoneNumber"
                   name="phoneNumber"
+                  placeholder={transalationMessage("phoneNumberPlaceholder")}
                   className="p-2 block w-full outline-none rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
@@ -131,7 +141,7 @@ export default function SignUp() {
                   htmlFor="password"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
-                  Password
+                  {transalationMessage("password")}
                   <sup className="text-red-600 text-sm mx-1">*</sup>
                 </label>
               </div>
@@ -140,6 +150,7 @@ export default function SignUp() {
                   id="password"
                   type="password"
                   name="password"
+                  placeholder={transalationMessage("passwordPlaceholder")}
                   className="p-2 block w-full rounded-md outline-none border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
@@ -151,7 +162,7 @@ export default function SignUp() {
                   htmlFor="confirmPassword"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
-                  Confirm password
+                  {transalationMessage("confirmPassword")}
                   <sup className="text-red-600 text-sm mx-1">*</sup>
                 </label>
               </div>
@@ -159,6 +170,9 @@ export default function SignUp() {
                 <input
                   id="confirmPassword"
                   type="password"
+                  placeholder={transalationMessage(
+                    "confirmPasswordPlaceholder"
+                  )}
                   name="confirmPassword"
                   className="p-2 block w-full rounded-md outline-none border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
@@ -170,18 +184,18 @@ export default function SignUp() {
                 title="submit"
                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Sign in
+                {transalationMessage("signUp")}
               </button>
             </div>
           </form>
 
           <p className="mt-10 text-center text-sm text-gray-500">
-            Already a member?{" "}
+            {transalationMessage("alreadyMember")}?{" "}
             <a
               href="#"
               className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
             >
-              You already have an account?
+              {transalationMessage("alreadyHaveAccount")}?
             </a>
           </p>
         </div>
